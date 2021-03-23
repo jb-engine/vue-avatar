@@ -1,12 +1,17 @@
 <template>
   <div class="vue-avatar--wrapper" :style="[style, customStyle]" aria-hidden="true">
     <!-- this img is not displayed; it is used to detect failure-to-load of div background image -->
-    <img v-if="this.isImage" style="display: none" :src="this.src" @error="onImgError"/>
+    <img v-if="this.isImage" style="display: none" v-lazy="this.src" @error="onImgError"/>
     <span v-show="!this.isImage">{{ userInitial }}</span>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload)
+
 const getInitials = (username) => {
   let parts = username.split(/[ -]/)
   let initials = ''
