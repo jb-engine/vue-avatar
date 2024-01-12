@@ -1,3 +1,8 @@
+# vue-avatar Archived
+
+## Archive Notice
+As of January 12, 2024, this project has been marked as outdated and is no longer maintained or updated. The codebase has been archived and is available for historical purposes and for those who might find the previous versions useful.
+
 # vue-avatar
 
 [![Build Status](https://travis-ci.org/eliep/vue-avatar.svg?branch=master)](https://travis-ci.org/eliep/vue-avatar)
